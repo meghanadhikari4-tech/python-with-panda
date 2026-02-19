@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt  # required for charts
 data={
     'place':['thimi','newroad','bhaktapur','gathaghar','lalitpur'],
     'month':['january','februrary','march','april','may'],
@@ -15,9 +16,14 @@ pivot=pd.pivot_table(
     index='place',
     columns='month',
     aggfunc='sum',
+    fill_value=0,
 )
+pivot=pivot.sort_values(by='march',ascending=False)
+pivot.plot(kind='bar')
+plt.show()
 print(pivot)
 
 print('the given sales is:\n')
 print(report)
+
 
