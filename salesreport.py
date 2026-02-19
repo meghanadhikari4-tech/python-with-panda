@@ -1,9 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt  # required for charts
 data={
-    'place':['thimi','newroad','bhaktapur','gathaghar','lalitpur'],
-    'month':['january','februrary','march','april','may'],
-    'sales':[125,87,50,78,89]
+    'place':['thimi']*5+['newroad']*5+['bhaktapur']*5+['gathaghar']*5+['bhaktapur']*5+['lalitpur']*5,
+    'month':['january','februrary','march','april','june','may']*5,
+    'sales':[125,87,50,78,100,89]*5
 }
 df=pd.DataFrame(data)
 df['sales']=pd.to_numeric(df['sales'])
@@ -27,6 +27,7 @@ print(pivot)
 
 print('the given sales is:\n')
 print(report)
+
 
 
 
