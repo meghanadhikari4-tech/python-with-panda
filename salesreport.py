@@ -20,10 +20,13 @@ pivot=pd.pivot_table(
 )
 pivot=pivot.sort_values(by='march',ascending=False)
 pivot.plot(kind='bar')
+plt.title("sales place per month")
+plt.xlabel("place")
 plt.show()
 print(pivot)
 
 print('the given sales is:\n')
 print(report)
+
 
 
