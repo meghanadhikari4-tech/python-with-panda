@@ -19,14 +19,21 @@ pivot=pd.pivot_table(
     fill_value=0,
 )
 pivot=pivot.sort_values(by='march',ascending=False)
-pivot.plot(kind='bar')
-plt.title("sales place per month")
-plt.xlabel("place")
+pivot.plot(
+    kind='bar',
+    fontsize="10",
+    colormap="viridis",
+    width=0.8
+)
+plt.title("sales place per month",fontsize="10",fontweight="bold")
+plt.xlabel("place",fontsize="10")
+plt.tight_layout()
 plt.show()
 print(pivot)
 
 print('the given sales is:\n')
 print(report)
+
 
 
 
